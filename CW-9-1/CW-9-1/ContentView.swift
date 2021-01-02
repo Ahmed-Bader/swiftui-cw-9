@@ -4,32 +4,43 @@
 //
 //  Created by Ahmed Alkhuder on 29/12/20.
 //
+// CW-9-2 update to include navigation view an details
 
 import SwiftUI
 
 struct ContentView: View {
     
     var body: some View {
-        
-        List
-        {
-            MovieRow(movieName: "Avengers", mainChars: ["captain america","thor", "hulk"])
-            MovieRow(movieName: "Deadpool", mainChars: ["Deadpool himself","weird people"])
-            MovieRow(movieName: "Terminator", mainChars: ["terminator", "the Conors"])
-            
+        // adding nav view and nav links
+        NavigationView{
+            List
+            {
+                NavigationLink(
+                    destination: MovieDetailsView(movie: "Avengers", characters: ["captain america","thor", "hulk"]),
+                    label: {
+                        MovieRow(movieName: "Avengers", mainChars: ["Deadpool himself","weird people"])
+                    })
+                
+                NavigationLink(
+                    destination: MovieDetailsView(movie: "Deadpool", characters: ["captain america","thor", "hulk"]),
+                    label: {
+                        MovieRow(movieName: "Deadpool", mainChars: ["Deadpool himself","weird people"])
+                    })
+                
+                NavigationLink(
+                    destination: MovieDetailsView(movie: "Terminator", characters: ["terminator", "the Conors"]),
+                    label: {
+                        MovieRow(movieName: "Terminator", mainChars: ["terminator", "the Conors"])
+                    })
+                
+            }.navigationBarTitle("Movies")
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 struct MovieRow: View {
-    var movieName : String
-    var mainChars : [String]
+    let movieName : String
+    let mainChars : [String]
     
     var body: some View {
         HStack(alignment: .center)
@@ -51,5 +62,11 @@ struct MovieRow: View {
             
             
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

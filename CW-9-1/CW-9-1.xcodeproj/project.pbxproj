@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1B336225A0E051003BE1D6 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B336125A0E051003BE1D6 /* MovieDetailsView.swift */; };
 		3BCDFF28259BB1A1006530A9 /* CW_9_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDFF27259BB1A1006530A9 /* CW_9_1App.swift */; };
 		3BCDFF2A259BB1A1006530A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDFF29259BB1A1006530A9 /* ContentView.swift */; };
 		3BCDFF2C259BB1A2006530A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDFF2B259BB1A2006530A9 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B1B336125A0E051003BE1D6 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		3BCDFF24259BB1A1006530A9 /* CW-9-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CW-9-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCDFF27259BB1A1006530A9 /* CW_9_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CW_9_1App.swift; sourceTree = "<group>"; };
 		3BCDFF29259BB1A1006530A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				3BCDFF27259BB1A1006530A9 /* CW_9_1App.swift */,
 				3BCDFF29259BB1A1006530A9 /* ContentView.swift */,
+				3B1B336125A0E051003BE1D6 /* MovieDetailsView.swift */,
 				3BCDFF2B259BB1A2006530A9 /* Assets.xcassets */,
 				3BCDFF30259BB1A2006530A9 /* Info.plist */,
 				3BCDFF2D259BB1A2006530A9 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1B336225A0E051003BE1D6 /* MovieDetailsView.swift in Sources */,
 				3BCDFF2A259BB1A1006530A9 /* ContentView.swift in Sources */,
 				3BCDFF28259BB1A1006530A9 /* CW_9_1App.swift in Sources */,
 			);
