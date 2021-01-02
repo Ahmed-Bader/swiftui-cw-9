@@ -49,7 +49,6 @@ struct MovieRow: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-                .background(Color.blue)
                 .clipShape(Circle())
             
             VStack(alignment: .leading)

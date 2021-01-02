@@ -29,7 +29,6 @@ struct MovieDetailsView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300)
-                    .background(Color.blue)
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 6))
                 
