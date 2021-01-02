@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
+        
         List
         {
             MovieRow(movieName: "Avengers", mainChars: ["captain america","thor", "hulk"])
-            MovieRow(movieName: "Deadpool", mainChars: ["Deadpool himself","wierd people"])
+            MovieRow(movieName: "Deadpool", mainChars: ["Deadpool himself","weird people"])
             MovieRow(movieName: "Terminator", mainChars: ["terminator", "the Conors"])
             
         }
@@ -31,7 +32,7 @@ struct MovieRow: View {
     var mainChars : [String]
     
     var body: some View {
-        HStack(alignment: .top)
+        HStack(alignment: .center)
         {
             Image(movieName)
                 .resizable()
@@ -44,8 +45,11 @@ struct MovieRow: View {
             {
                 Text(movieName)
                     .font(.largeTitle)
+                
                 Text(mainChars.joined(separator: ", "))
             }
+            
+            
         }
     }
 }
