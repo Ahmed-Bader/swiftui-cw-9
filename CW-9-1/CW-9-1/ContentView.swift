@@ -13,39 +13,32 @@ struct ContentView: View {
     var body: some View {
         // adding nav view and nav links
         NavigationView{
-            List
-            {
-                NavigationLink(
-                    destination: MovieDetailsView(movie: "Avengers", characters: ["captain america","thor", "hulk"]),
+            /*
+             list of the array movies (from Movie swift file)
+             movie: is the var from MovieRow (var movie : Movie)
+             film is a name i choose to represent what is taken
+             from the swift file
+             
+             in == like a for loop that shows the rows of navigation links
+             we use the name we chose (in this case : film) to send to the subview
+            */
+            List(movies) { film in NavigationLink(
+                    destination: MovieDetailsView(movie: film),
                     label: {
-                        MovieRow(movieName: "Avengers", mainChars: ["Deadpool himself","weird people"])
+                        MovieRow(movie: film)
                     })
-                
-                NavigationLink(
-                    destination: MovieDetailsView(movie: "Deadpool", characters: ["captain america","thor", "hulk"]),
-                    label: {
-                        MovieRow(movieName: "Deadpool", mainChars: ["Deadpool himself","weird people"])
-                    })
-                
-                NavigationLink(
-                    destination: MovieDetailsView(movie: "Terminator", characters: ["terminator", "the Conors"]),
-                    label: {
-                        MovieRow(movieName: "Terminator", mainChars: ["terminator", "the Conors"])
-                    })
-                
             }.navigationBarTitle("Movies")
         }
     }
 }
 
 struct MovieRow: View {
-    let movieName : String
-    let mainChars : [String]
+    var movie : Movie // from the Movie Swift file
     
     var body: some View {
         HStack(alignment: .center)
         {
-            Image(movieName)
+            Image(movie.title)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
@@ -53,10 +46,10 @@ struct MovieRow: View {
             
             VStack(alignment: .leading)
             {
-                Text(movieName)
+                Text(movie.title)
                     .font(.largeTitle)
                 
-                Text(mainChars.joined(separator: ", "))
+                Text(movie.characters.joined(separator: ", "))
             }
             
             
