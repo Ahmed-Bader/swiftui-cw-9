@@ -5,6 +5,7 @@
 //  Created by Ahmed Alkhuder on 29/12/20.
 //
 // CW-9-2 update to include navigation view an details
+// movie rows
 
 import SwiftUI
 
